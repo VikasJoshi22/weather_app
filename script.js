@@ -22,10 +22,24 @@ searchButton.addEventListener("click", (e) => {
       humidity.innerHTML = data.main.humidity + "%";
       windSpeed.innerHTML = data.wind.speed + "km/h";
       cityName.innerHTML = city;
-      if(weatherCondition == 'Clouds'){
+      if(data.weather[0].main == 'Clouds'){
         document.querySelector('.weather-condition').src = 'images/clouds.png';
       }
-      else if(data.weather[0].main == 'Clouds')
+      else if(data.weather[0].main == 'Clear'){
+        document.querySelector('.weather-condition').src = 'images/clear.png';
+      }
+      else if(data.weather[0].main == 'Snow'){
+        document.querySelector('.weather-condition').src = 'images/snow.png';
+      }
+      else if(data.weather[0].id > '700' && data.weather[0].id < '800'){
+        document.querySelector('.weather-condition').src = 'images/mist.png';
+      }
+      else if(data.weather[0].main == 'Rain'){
+        document.querySelector('.weather-condition').src = 'images/rain.png';
+      }
+      else if(data.weather[0].main == 'Drizzle' || data.weather[0].main == 'Thunderstorm'){
+        document.querySelector('.weather-condition').src = 'images/drizzle.png';
+      }
     })
     .catch((er) => {
       alert("enter a valid location");
@@ -47,6 +61,24 @@ searchBar.addEventListener("keypress", (e) => {
         windSpeed.innerHTML = data.wind.speed + "km/h";
         cityName.innerHTML = city;
         weatherCondition = data.weather[0].main;
+        if(data.weather[0].main == 'Clouds'){
+          document.querySelector('.weather-condition').src = 'images/clouds.png';
+        }
+        else if(data.weather[0].main == 'Clear'){
+          document.querySelector('.weather-condition').src = 'images/clear.png';
+        }
+        else if(data.weather[0].main == 'Snow'){
+          document.querySelector('.weather-condition').src = 'images/snow.png';
+        }
+        else if(data.weather[0].id > '700' && data.weather[0].id < '800'){
+          document.querySelector('.weather-condition').src = 'images/mist.png';
+        }
+        else if(data.weather[0].main == 'Rain'){
+          document.querySelector('.weather-condition').src = 'images/rain.png';
+        }
+        else if(data.weather[0].main == 'Drizzle' || data.weather[0].main == 'Thunderstorm'){
+          document.querySelector('.weather-condition').src = 'images/drizzle.png';
+        }
     }).catch((er) => {
         alert("enter a valid location");
     });
