@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', 'sans-serif';
+    box-sizing: border-box;
+    color: white;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #222;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.card{
+    background: linear-gradient(135deg,rgb(0, 255, 204), aqua, rgb(0, 206, 206), rgb(0, 134, 174), purple);
+    /* width: 30%; */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.search img{
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    padding: 18px;
+    border-radius: 50%;
+    margin: 3px;
+    cursor: pointer;
+}
+.search input{
+    height: 50px;
+    width: 300px;
+    border-radius: 40px;
+    border: none;
+    margin: 3px;
+    padding: 10px 15px;
+    font-size: large;
+    color: #000;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+}
+.temperature{
+    color: aliceblue;
+    font-size: 100px;
+    position: relative;
+    margin-top: -20px;
+}
+.city-name{
+    color: aliceblue;
+    font-size: 50px;
+    position: relative;
+    text-transform: capitalize;
+}
+.humidity, .wind-speed{
+    font-size: 30px;
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+.other-info img{
+    height: 30px;
+    margin-right: 5px;
+}
+.other-info{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
